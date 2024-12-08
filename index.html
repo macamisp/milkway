@@ -1,0 +1,46 @@
+<html><head><base href="." /><title>macami sp</title><style>
+
+</style>
+<link rel="stylesheet" href="styel.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+<div id="info">The Milky Way Galaxy</div>
+<div class="menu">
+    <button onclick="focusEarth()">Focus Earth</button>
+    <button onclick="focusGalaxyCenter()">Galaxy Center</button>
+    <button onclick="toggleStarfield()">Toggle Stars</button>
+    <button onclick="focusSolarSystem()">Solar System</button>
+    <button onclick="focusNebula()">Orion Nebula</button>
+</div>
+
+<div id="planetInfo">
+    <h3>Planet Controls</h3>
+    
+    <div class="planet-controls">
+        <h4>Orbit Controls</h4>
+        <label>Orbit Speed:</label>
+        <input type="range" id="orbitSpeed" min="0" max="200" value="100" onchange="updateOrbitSpeed(this.value)">
+        <label>Rotation Speed:</label>
+        <input type="range" id="rotationSpeed" min="0" max="200" value="100" onchange="updateRotationSpeed(this.value)">
+        
+    </div>
+</div>
+
+<div class="planet-nav">
+    <button onclick="showPlanetPage('mercury')">Mercury</button>
+    <button onclick="showPlanetPage('venus')">Venus</button>
+    <button onclick="showPlanetPage('earth')">Earth</button>
+    <button onclick="showPlanetPage('mars')">Mars</button>
+    <button onclick="showPlanetPage('jupiter')">Jupiter</button>
+    <button onclick="showPlanetPage('saturn')">Saturn</button>
+    <button onclick="showPlanetPage('uranus')">Uranus</button>
+    <button onclick="showPlanetPage('neptune')">Neptune</button>
+    <button onclick="showPlanetPage('dwarf')">Dwarf Planets</button>
+    <button onclick="showPlanetPage('asteroids')">Asteroids</button>
+</div>
+
+<div id="planetPages"></div>
+<script src="script.js"></script>
+</body>
+</html>
